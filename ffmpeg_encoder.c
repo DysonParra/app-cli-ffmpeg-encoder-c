@@ -293,14 +293,14 @@ static void makeLog(time_t start, time_t end, char* logFileName, char* inputFile
 
     // Escribe nombre del archivo de salida, hora de inicio y hora de fin de la conversión.
     fprintf(log, "\n\nInput file:       %s\n", inputFile);
-    fprintf(log, "Output file:     %s\n", outputFile);
+    fprintf(log, "Output file:      %s\n", outputFile);
 
     int totalSeconds = (int)(end - start);                                                              // Calcula la cantidad de segundos que tardó la conversión o descarga.
 
     inputSize = getFileSize(inputFile, 2);
     fprintf(log, "Input size:       %4.2f MB\n", inputSize);
     outputSize = getFileSize(outputFile, 2);
-    fprintf(log, "Output size:     %4.2f MB\n", outputSize);
+    fprintf(log, "Output size:      %4.2f MB\n", outputSize);
 
     if (!inputSize)
         fprintf(log, "Percent output:   %4.2f%c\n", 0.0, 37);
@@ -324,6 +324,6 @@ static void makeLog(time_t start, time_t end, char* logFileName, char* inputFile
     totalSeconds %= 60;
     sec = totalSeconds;                                                                                 // Calcula la cantidad de segundos que tardó la conversión.
 
-    fprintf(log, "Time Elapsed:   %02d:%02d:%02d\n", hour, min, sec);                                   // Escribe cuanto tardó la conversión en el log.
+    fprintf(log, "Time Elapsed:     %02d:%02d:%02d\n", hour, min, sec);                                 // Escribe cuanto tardó la conversión en el log.
     fclose(log);                                                                                        // Cierra el log.
 }
