@@ -31,7 +31,7 @@ There's two type of libraries:
 # Makefile
 There's some important variables:
   - appName  
-    The name of the source file with main method withouth extension.
+    The name of the source file with main method without extension.
   - prefferDynamic  
     If there are a dynamic lib (.dll) and a static lib (.a) for the same source file (.c), when create the binary file it need to decide which use to generate the binary, so if the value is 0 use the static, and else use the dynamic.
 
@@ -50,6 +50,6 @@ Generally the only one task used is 'all', but these task call another tasks, an
   - make appR  
     It executes make app and then run the app.
   - make appN
-    Generate or try to generate the binary file (.exe) withouth identify the libraries to link.
+    Generate or try to generate the binary file (.exe) without identify the libraries to link.
   - make appNR
     It executes make appN and then run the app.
